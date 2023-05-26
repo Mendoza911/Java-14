@@ -34,8 +34,6 @@ public class ShopRepositoryTest {
         repository.add(new Product(2, "eggs", 78));
         repository.add(new Product(3, "bread", 45));
 
-        repository.remove(4);
-
         Assertions.assertThrows(NotFoundException.class, () -> {
             repository.remove(4);
         });
